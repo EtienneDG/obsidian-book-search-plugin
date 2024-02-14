@@ -60,7 +60,7 @@ export class GoogleBooksApi implements BaseBooksApiImpl {
       category: this.formatList(item.categories),
       publisher: item.publisher,
       totalPage: item.pageCount,
-      coverUrl: item.imageLinks?.thumbnail ?? '',
+      coverUrl: item.imageLinks?.thumbnail?.replace('zoom=1', 'zoom=3').replace('http://', 'https://') ?? '',
       coverSmallUrl: item.imageLinks?.smallThumbnail ?? '',
       publishDate: item.publishedDate || '',
       description: item.description,

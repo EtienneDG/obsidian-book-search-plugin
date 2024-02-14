@@ -6,9 +6,11 @@
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
 .book-search-plugin__settings--new_file_name_hint {
   margin-bottom: 20px;
 }
+
 .book-search-plugin__settings--service_provider .dropdown {
   text-transform: capitalize;
 }
@@ -24,6 +26,30 @@
 .book-search-plugin__search-modal--input {
   padding-bottom: 18px;
 }
+
 .book-search-plugin__search-modal--input input {
   width: 100%;
+}
+
+.book-search-plugin__suggestion-modal--suggestion {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5px;
+}
+
+.book-search-plugin__suggestion-modal--suggestion img {
+  width: 40px;
+  grid-column: 1;
+  grid-row: span 2;
+}
+
+.book-search-plugin__suggestion-modal--suggestion div {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.book-search-plugin__suggestion-modal--suggestion small {
+  grid-column: 2;
+  grid-row: 2;
 }

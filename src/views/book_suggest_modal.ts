@@ -29,8 +29,11 @@ export class BookSuggestModal extends SuggestModal<Book> {
     const publishDate = book.publishDate ? `(${book.publishDate})` : '';
     const totalPage = book.totalPage ? `, p${book.totalPage}` : '';
     const subtitle = `${book.author}${publisher}${publishDate}${totalPage}`;
-    el.createEl('div', { text: title });
-    el.createEl('small', { text: subtitle });
+
+    const suggestion = el.createDiv('book-search-plugin__suggestion-modal--suggestion');
+    suggestion.createEl('img', { attr: { src: book.coverUrl } });
+    suggestion.createDiv({ text: title, attr: { test: 'test' } });
+    suggestion.createEl('small', { text: subtitle });
   }
 
   // Perform action on the selected suggestion.
